@@ -29,11 +29,8 @@ public class VirtuluGenerators : MonoBehaviour {
             minPoz = vecaks.position.x - 30;
             maxPoz = vecaks.position.x + 30;
 			var cipars = Random.Range(minPoz, maxPoz);
-			
 			var pozicija = new Vector3(cipars, transform.position.y);
-			GameObject virtulis =
-			Instantiate(virtuluSagataves[Random.Range(0, virtuluSagataves.Length)],
-			pozicija, Quaternion.identity, vecaks);
+			GameObject virtulis = Instantiate(virtuluSagataves[Random.Range(0, virtuluSagataves.Length)], pozicija, Quaternion.identity, vecaks);
 			yield return new WaitForSeconds(laikaIntervals);
         }
 	}
